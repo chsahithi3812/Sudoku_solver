@@ -1,11 +1,12 @@
 #include<iostream>
 #include<bits/stdc++.h>
-void displaysud(int g[9][9]);
-bool findzero(int g[9][9], int &r, int &c);
-bool presentincol(int g[9][9],int col,int num);
-bool presentinrow(int g[9][9],int row,int num);
-bool presentinbox(int g[9][9],int row,int col,int num );
-bool valid(int g[9][9],int row,int col,int num);
+// this works on backtracing algrithm
+void displaysud(int g[9][9]);//displays the sudoku
+bool findzero(int g[9][9], int &r, int &c);//empty spaces are initialised to zeroes
+bool presentincol(int g[9][9],int col,int num);//number present in coloum
+bool presentinrow(int g[9][9],int row,int num);//number present in row
+bool presentinbox(int g[9][9],int row,int col,int num );//number present in 3*3 box
+bool valid(int g[9][9],int row,int col,int num);//number to be valid or not
 bool solvesudoko(int g[9][9]);
 using namespace std;
 int main()
